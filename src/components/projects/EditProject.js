@@ -18,7 +18,7 @@ class EditProject extends Component {
     // const description = this.state.description;
 
 
-    axios.put(`http://localhost:5000/api/projects/${this.props.theProject._id}`, { title, description })
+    axios.put(`http://localhost:5000/api/projects/${this.props.theProject._id}`, { title, description }, {withCredentials:true})
     .then( () => {
         this.props.getTheProject();
         // after submitting the form, redirect to '/projects'

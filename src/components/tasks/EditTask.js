@@ -18,7 +18,7 @@ class EditTask extends Component {
     // const description = this.state.description;
 
     ///api/tasks/:id
-    axios.put(`http://localhost:5000/api/tasks/${this.props.theTask._id}`, { title, description })
+    axios.put(`http://localhost:5000/api/tasks/${this.props.theTask._id}`, { title, description }, {withCredentials:true})
     .then( () => {
         this.props.getTheTask();
         // after submitting the form, redirect to '/projects'
